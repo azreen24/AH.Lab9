@@ -4,6 +4,12 @@ def encode_password(password):
         new_digit = str((int(digits)) + 3) % 10
         encoded_password += new_digit
     return encoded_password
+def decode_password(encoded_password):
+    decoded_password = ""
+    for digit in encoded_password:
+        decoded_digit = str((int(digit) - 3) % 10)
+        decoded_password += decoded_digit
+    return decoded_password
 
 def main():
     while True:
@@ -29,6 +35,5 @@ def main():
             break
         else:
             print("Invalid option. Please try again.")
-
 if __name__ == "__main__":
     main()
