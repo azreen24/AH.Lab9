@@ -1,7 +1,7 @@
 def encode_password(password):
     encoded_password = ""
-    for digits in password:
-        new_digit = str((int(digits)) + 3) % 10
+    for digit in password:
+        new_digit = str((int(digit) + 3) % 10)
         encoded_password += new_digit
     return encoded_password
 def decode_password(encoded_password):
@@ -31,7 +31,6 @@ def main():
             else:
                 print("No password has been encoded yet!")
         elif option == "3":
-            print("Goodbye!")
             break
         else:
             print("Invalid option. Please try again.")
